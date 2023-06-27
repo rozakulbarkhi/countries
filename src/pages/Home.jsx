@@ -53,7 +53,7 @@ const Home = () => {
         <Input handleChange={handleChange} value={filter} />
         <Select handleClick={handleClick} region={region} />
       </div>
-      <div className="py-8 grid md:grid-cols-4 grid-cols-1 md:gap-28 gap-14">
+      <div className="py-8 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 lg:gap-28 gap-14">
         {filteredCountriesByRegion.length > 0 ? (
           filteredCountriesByRegion?.map((country) => (
             <Card key={country?.name?.common} country={country} />
