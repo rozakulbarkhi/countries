@@ -49,14 +49,18 @@ const Detail = () => {
             />
           </div>
         </div>
-
+        {console.log(countryData)}
         <div className="flex-1 md:my-4 my-8 flex flex-col justify-between">
           <div className="font-bold text-lg">{countryData?.name?.common}</div>
           <div className="md:flex justify-center items-start h-full my-6">
             <div className="flex-1 flex flex-col gap-2">
               <div>
                 <span className="font-semibold">Native name: </span>
-                {countryData?.name?.nativeName?.nld?.common}
+                {
+                  countryData?.name?.nativeName?.[
+                    Object.keys(countryData?.name?.nativeName)[0]
+                  ]?.common
+                }
               </div>
               <div>
                 <span className="capitalize font-semibold">population: </span>
